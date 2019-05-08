@@ -212,12 +212,13 @@ textarea{
 	background-color: #548FBD;
 	color: white;
 	height: 50px;
-	width: 100px;
+	/*width: 100px;*/
 	font-size: 18px;
 	border-radius: 10px;
 	border:2px solid #548FBD;
 	box-sizing: border-box;
 	transition-duration: 500ms;
+	padding: 10px 20px
 }
 .submit:hover{
 	background-color: white;
@@ -239,3 +240,55 @@ footer{
 footer .footer-right{
 	margin-right: 80px;
 }
+
+/*レスポンシブ対応*/
+
+/*小型PC用想定*/
+@media screen and (max-width: 1280px) {
+	.img-box{
+		justify-content: space-around;
+	}
+	.img-box li{
+		margin-right: 30px;
+	}
+}
+@media screen and (max-width: 960px) {
+/*curriculum*/
+	.img-box{
+		flex-wrap: wrap;
+		/*改行処理あり↑*/
+		align-content: space-around;
+	}
+	.img-box li{
+		margin-top: 30px;
+		margin-right: 0px;
+	}
+/*contact*/
+	.contact{
+		height: 100%;
+		padding: 40px 20px;
+	}
+	.contact .form{
+		flex-flow: column nowrap;
+		/*改行なしになる↑*/
+		margin: 30px 0;
+	}
+	.form-left{
+		margin-right:0;
+		margin-bottom: 30px;
+	}
+	.form .name,
+	.form .e-mail{
+		width: 80%;
+	}
+	.form .inquiry{
+		width: 80%;
+	}
+	.contact button{
+		font-size:20px;
+		padding: 5px 40px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+}
+
