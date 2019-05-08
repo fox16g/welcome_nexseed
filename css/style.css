@@ -2,10 +2,10 @@
 .fixed{
 	position: fixed;
 	width: 100%;
-	margin-top:70px;
+	margin-top:-70px;
 }
 #margin-for-fixed{
-	margin-top:-70px;
+	margin-top:70px;
 	/*headerが下から通り過ぎたらz-indexを使う*/
 }
 
@@ -212,7 +212,6 @@ textarea{
 	background-color: #548FBD;
 	color: white;
 	height: 50px;
-	/*width: 100px;*/
 	font-size: 18px;
 	border-radius: 10px;
 	border:2px solid #548FBD;
@@ -292,3 +291,57 @@ footer .footer-right{
 	}
 }
 
+@media screen and (max-width: 480px) {
+	body{
+		min-width: 375px;
+	}
+/*headerの対応*/
+	.header-right{
+		display: none;
+	}
+	.icon{
+		margin-left: 20px;
+	}
+	.icon span{
+		display: none;
+	}
+
+/*welcome*/
+	.title{
+		font-size: 30px;
+	}
+	.guidline{
+		margin-top: 30px;
+		font-size: 24px;
+		font-weight: normal;
+	}
+	.btn-group{
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		margin-top: 40px;
+	}
+	.btn{
+		margin-left: 0px;
+		font-weight: bold;
+		font-size: 24px;
+		margin-top: 20px;
+		height: 48px;
+		width: 40%;
+	}
+	.btn:first-child{
+		margin-top: 0px;
+	}
+
+/*footerの対応*/
+	footer{
+		justify-content: center;
+	}
+	footer .icon{
+		display: none;
+	}
+	footer .footer-right{
+		margin-right: 0;
+		/*通常PC版でmargin指定したのをなおす*/
+	}
+｝
