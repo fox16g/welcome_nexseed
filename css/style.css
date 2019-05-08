@@ -1,3 +1,14 @@
+/*header固定*/
+.fixed{
+	position: fixed;
+	width: 100%;
+	margin-top:-70px;
+}
+#margin-for-fixed{
+	margin-top:70px;
+	/*headerが下から通り過ぎたらz-indexを使う*/
+}
+
 header{
 	display: flex;
 	justify-content: space-between;
@@ -201,12 +212,12 @@ textarea{
 	background-color: #548FBD;
 	color: white;
 	height: 50px;
-	width: 100px;
 	font-size: 18px;
 	border-radius: 10px;
 	border:2px solid #548FBD;
 	box-sizing: border-box;
 	transition-duration: 500ms;
+	padding: 10px 20px
 }
 .submit:hover{
 	background-color: white;
@@ -214,3 +225,123 @@ textarea{
 	border-color:#548FBD;
 	transition-duration: 500ms;
 }
+
+footer{
+	background-color: #233f51;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+	padding-top: 5px;
+	color: #fff;
+}
+
+footer .footer-right{
+	margin-right: 80px;
+}
+
+/*レスポンシブ対応*/
+
+/*小型PC用想定*/
+@media screen and (max-width: 1280px) {
+	.img-box{
+		justify-content: space-around;
+	}
+	.img-box li{
+		margin-right: 30px;
+	}
+}
+@media screen and (max-width: 960px) {
+/*curriculum*/
+	.img-box{
+		flex-wrap: wrap;
+		/*改行処理あり↑*/
+		align-content: space-around;
+	}
+	.img-box li{
+		margin-top: 30px;
+		margin-right: 0px;
+	}
+/*contact*/
+	.contact{
+		height: 100%;
+		padding: 40px 20px;
+	}
+	.contact .form{
+		flex-flow: column nowrap;
+		/*改行なしになる↑*/
+		margin: 30px 0;
+	}
+	.form-left{
+		margin-right:0;
+		margin-bottom: 30px;
+	}
+	.form .name,
+	.form .e-mail{
+		width: 80%;
+	}
+	.form .inquiry{
+		width: 80%;
+	}
+	.contact button{
+		font-size:20px;
+		padding: 5px 40px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	body{
+		min-width: 375px;
+	}
+/*headerの対応*/
+	.header-right{
+		display: none;
+	}
+	.icon{
+		margin-left: 20px;
+	}
+	.icon span{
+		display: none;
+	}
+
+/*welcome*/
+	.title{
+		font-size: 30px;
+	}
+	.guidline{
+		margin-top: 30px;
+		font-size: 24px;
+		font-weight: normal;
+	}
+	.btn-group{
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		margin-top: 40px;
+	}
+	.btn{
+		margin-left: 0px;
+		font-weight: bold;
+		font-size: 24px;
+		margin-top: 20px;
+		height: 48px;
+		width: 40%;
+	}
+	.btn:first-child{
+		margin-top: 0px;
+	}
+
+/*footerの対応*/
+	footer{
+		justify-content: center;
+	}
+	footer .icon{
+		display: none;
+	}
+	footer .footer-right{
+		margin-right: 0;
+		/*通常PC版でmargin指定したのをなおす*/
+	}
+｝
